@@ -3,6 +3,7 @@ const fs = require("fs");
 const config = require("./config");
 const { getTimestamp, color } = require("./utils/loggingEffects.js");
 const setupLoggers = require("./utils/setupLoggers");
+const updateRPC = require("./events/ReadyEvents/fivemRPC.js");
 
 // Client Loader //
 
@@ -88,16 +89,19 @@ auditLogsClient(client);
     client.handleCommands(commandFolders, "./src/commands");
     client.prefixCommands(pcommandFolders, "./src/prefix");
     // Loads Val Api //
-    client
-        .login(token)
-        .then(() => {
-            handleLogs(client);
-            checkVersion(currentVersion);
-        })
-        .catch((error) => {
-            console.error(
-                `${color.red}[${getTimestamp()}]${color.reset} [LOGIN] Error while logging into ${config.botName}. Check if your token is correct or double check your also using the correct intents. \n${color.red}[${getTimestamp()}]${color.reset} [LOGIN]`,
-                error,
-            );
-        });
+ client
+ .login(token)
+ .then(() => {
+     handleLogs(client);
+     checkVersion(currentVersion);
+
+     updateRPC(client);
+     setInterval(() => updateRPC(client), 60 * 1000);
+ })
+ .catch((error) => {
+     console.error(
+         `${color.red}[${getTimestamp()}]${color.reset} [LOGIN] Error while logging into ${config.botName}. Check if your token is correct or double check you're also using the correct intents. \n${color.red}[${getTimestamp()}]${color.reset} [LOGIN]`,
+         error,
+     );
+ });
 })();
