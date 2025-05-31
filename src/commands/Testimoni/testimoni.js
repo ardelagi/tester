@@ -18,7 +18,7 @@ module.exports = {
     .addAttachmentOption(option =>
       option.setName('image').setDescription('Proof image for the transaction.').setRequired(true)),
 
-  enabled: true,
+
 
   async execute(interaction) {
     const { options, guild, member } = interaction;

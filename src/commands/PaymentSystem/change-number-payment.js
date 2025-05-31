@@ -14,7 +14,7 @@ module.exports = {
                 .setDescription('Nomor baru')
                 .setRequired(true)),
 
-enabled: true,
+
 
     async execute(interaction) {
         const method = interaction.options.getString('method');

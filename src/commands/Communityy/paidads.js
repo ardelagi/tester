@@ -19,7 +19,7 @@ module.exports = {
                 .setDescription('Durasi PaidAds (misal: 1d, 2h).')
                 .setRequired(true)),
 
-    enabled: true,
+
 
     async execute(interaction) {
         // Cek permission Admin

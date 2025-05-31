@@ -36,7 +36,7 @@ module.exports = {
                 .setDescription('Set a color for the embed (e.g., #235ee7 or "Blue").')
                 .setRequired(false)),
 
-    enabled: true,
+
 
     async execute(interaction) {
         const { options, guildId, channel } = interaction;

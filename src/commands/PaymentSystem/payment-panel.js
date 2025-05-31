@@ -28,7 +28,7 @@ module.exports = {
         .setDescription('Deskripsi embed.')
         .setRequired(true)),
 
-  enabled: true,
+
 
   async execute(interaction) {
     const { guild, options } = interaction;

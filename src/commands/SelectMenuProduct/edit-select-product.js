@@ -12,7 +12,7 @@ module.exports = {
         .setDescription("Edit a product from a select menu.")
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild),
 
-    enabled: true,
+
     
     async execute(interaction) {
         const data = await SelectMenu.findOne({ GuildID: interaction.guildId });

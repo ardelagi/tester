@@ -16,8 +16,7 @@ module.exports = {
                 .setDescription('Select the role for sellers.')
                 .setRequired(true)),
 
-    
-    enabled: true,
+
 
 
     async execute(interaction) {

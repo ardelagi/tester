@@ -22,8 +22,7 @@ module.exports = {
                 .setDescription('Upload gambar QRIS (opsional)')
                 .setRequired(false)),
 
-    enabled: true,
-    
+  
     async execute(interaction) {
         const { guild, options } = interaction;
         const method = options.getString('method');

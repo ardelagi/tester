@@ -18,7 +18,7 @@ async function updateRPC(client) {
 
     } catch (err) {
         console.error("❌ Gagal ambil data FiveM:", err);
-        client.user.setActivity(`Server Offline`, {
+        client.user.setActivity(`[0/48] on MOTIONLIFE`, {
             type: 3
         });
     }
