@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pengaturan <%= guild.name %></title></head>
+<body>
+    <h1>Pengaturan: <%= guild.name %></h1>
+
+    <form method="POST">
+        <label>Prefix:</label>
+        <input type="text" name="prefix" value="<%= config.prefix %>">
+        <button type="submit">Simpan</button>
+    </form>
+
+    <a href="/dashboard">Kembali ke dashboard</a>
+</body>
+</html>

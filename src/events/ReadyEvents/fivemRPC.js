@@ -2,8 +2,8 @@ const fetch = require('node-fetch');
 
 async function updateRPC(client) {
     try {
-        const resPlayers = await fetch('http://123.123.123.123:30120/players.json');
-        const resDynamic = await fetch('http://123.123.123.123:30120/dynamic.json');
+        const resPlayers = await fetch('http://main.kitarp.net:30120/players.json');
+        const resDynamic = await fetch('http://main.kitarp.net:30120/dynamic.json');
 
         const players = await resPlayers.json();
         const dynamic = await resDynamic.json();
