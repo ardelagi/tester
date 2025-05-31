@@ -7,8 +7,16 @@
     <form method="POST">
         <label>Prefix:</label>
         <input type="text" name="prefix" value="<%= config.prefix %>">
-        <button type="submit">Simpan</button>
-    </form>
+    <label>ID Log Channel</label><br>
+    <input name="logChannel" value="<%= config.logChannel || '' %>"><br><br>
+
+    <label>Welcome Message</label><br>
+    <input type="checkbox" name="welcomeMessage" <%= config.welcomeMessage ? 'checked' : '' %>><br><br>
+
+    <label>ID Auto Role</label><br>
+    <input name="autoRole" value="<%= config.autoRole || '' %>"><br><br>
+
+    <button type="submit">Simpan</button>
 
     <a href="/dashboard">Kembali ke dashboard</a>
 </body>
