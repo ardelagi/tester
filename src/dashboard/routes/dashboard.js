@@ -3,6 +3,12 @@ const router = express.Router();
 const GuildConfig = require('../../schemas/GuildConfig');
 const { client } = require('../app'); // kita export bot client dari app.js
 
+const userGuilds = req.user && req.user.guilds ? req.user.guilds : [];
+
+const mutualGuilds = userGuilds.filter(guild =>
+    botGuilds.includes(guild.id) && (guild.permissions & 0x20)
+);
+
 // Middleware: cek login
 function isAuth(req, res, next) {
     if (req.isAuthenticated()) return next();
