@@ -10,7 +10,7 @@ module.exports = {
                 .setDescription('Nama metode yang ingin dihapus')
                 .setRequired(true)),
 
-    enabled: false,
+    enabled: true,
 
     async execute(interaction) {
         const method = interaction.options.getString('method');

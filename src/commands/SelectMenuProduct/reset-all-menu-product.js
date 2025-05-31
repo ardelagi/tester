@@ -17,7 +17,7 @@ module.exports = {
                 .setRequired(true)
         ),
 
-    enabled: false,
+    enabled: true,
 
     async execute(interaction) {
         const { options, guildId } = interaction;

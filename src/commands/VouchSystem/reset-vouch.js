@@ -7,7 +7,7 @@ module.exports = {
         .setDescription('Reset the Vouch No and display how many times it\'s been used.')
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator), // Only allow Administrators (or Server Owner)
 
-    enabled: false,
+    enabled: true,
     
     async execute(interaction) {
         const { guild, user } = interaction;
