@@ -22,8 +22,7 @@ module.exports = {
     // Title
     ctx.fillStyle = '#07c1f5';
     ctx.font = 'bold 50px sans-serif';
-    ctx.fillText(`Selamat Datang di
-MOTIONLIFE ROLEPLAY`, 320, 80);
+    ctx.fillText(`Selamat Datang`, 320, 80);
 
     // Username
     ctx.font = '38px sans-serif';
@@ -52,7 +51,6 @@ MOTIONLIFE ROLEPLAY`, 320, 80);
 
     const attachment = new AttachmentBuilder(canvas.toBuffer(), { name: 'welcome.png' });
     const channel = member.guild.channels.cache.get(data.welcomeChannelId);
-    if (channel) channel.send({ content: `Selamat datang <@${member.id}> 
-Semoga kamu bisa merasa nyaman di kota ini dan menjadi bagian dari cerita besar kota ini.`, files: [attachment] });
+    if (channel) channel.send({ content: `Selamat datang <@${member.id}>`, files: [attachment] });
   }
 };
