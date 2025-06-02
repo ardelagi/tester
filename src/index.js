@@ -3,7 +3,7 @@ const fs = require("fs");
 const config = require("./config");
 const { getTimestamp, color } = require("./utils/loggingEffects.js");
 const setupLoggers = require("./utils/setupLoggers");
-const updateRPC = require("./events/ReadyEvents/fivemRPC.js");
+
 
 // Client Loader //
 

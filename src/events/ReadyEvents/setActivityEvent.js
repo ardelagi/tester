@@ -9,9 +9,7 @@ module.exports = {
         setInterval(() => {
 
             let activities = [
-                { type: ActivityType.Playing, name: `MOTIONLIFE ROLEPLAY` },
-                { type: ActivityType.Streaming, name: `COMING SOON` },
-                { type: ActivityType.Listening, name: `JUNE 2025` }
+                { type: ActivityType.Playing, name: `Ticket Support` }
             ];
 
             const status = activities[Math.floor(Math.random() * activities.length)];
